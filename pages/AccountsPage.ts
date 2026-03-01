@@ -21,10 +21,6 @@ export class AccountsPage extends BasePage {
         await expect(this.createButton).toBeVisible({ timeout: 15000 });
     }
 
-    async openAccounts(): Promise<void> {
-        await this.openModule('Account');
-    }
-
     async createAccount(name: string): Promise<void> {
         await this.createButton.click();
         await this.nameInput.fill(name);
